@@ -18,12 +18,15 @@ public class Main {
         }
         printListEmployee(employee);
         printLFullInfoEployee(employee);
+        s = calculationCost(employee);
+        System.out.println("Затраты за месяц на выплату зарплат: "+s);
+        System.out.println("Средний размер зарплаты:  "+s/employee[0].getSize());
         System.out.println("Сотрудник с минимальной зарплатой:");
         id = findMinSalary(employee);
         System.out.println(employee[id - 1]);
         s = employee[id-1].getSalary();
         employee[id -1].setSalary(s + 20_000);       /*   повышаем зарплату на 20 000 рублей  */
-        System.out.println("После повышения зарплаты на 20 000 рублей :");
+        System.out.println("После повышения зарплаты на 20 000 рублей:");
         System.out.println(employee[id - 1]);
         System.out.println("Сотрудник с максимальной зарплатой:");
         System.out.println(employee[findMaxSalary(employee) -1]);
@@ -34,6 +37,14 @@ public class Main {
         for (int i = 0; i < s; i++) {
             System.out.println(employee[i]);
         }
+    }
+    public static int calculationCost(Employee[] employee) {
+        int s = employee[0].getSize();
+        int sum = 0;
+        for (int i = 0; i < s; i++) {
+            sum += employee[i].getSalary();
+        }
+        return sum;
     }
     public static int findMinSalary(Employee[] employee) {
         int s = employee[0].getSize();
