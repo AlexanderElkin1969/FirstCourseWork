@@ -1,12 +1,12 @@
 package BaseDifficulty;
 
 public class Employee {
-    private String lastName;
-    private String firstName;
-    private String middleName;
+    private final String lastName;
+    private final String firstName;
+    private final String middleName;
     private int department;
     private int salary;
-    private int id;
+    private final int id;
 
     public static int size = 0;
 
@@ -57,7 +57,7 @@ public class Employee {
     }
 
     public String getName() {
-        return lastName + " " + firstName.charAt(0) + "." + middleName.charAt(0) + ".";
+        return lastName + " " + firstName + " " + middleName;
     }
 
     @Override
