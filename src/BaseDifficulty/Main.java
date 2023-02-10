@@ -8,7 +8,7 @@ public class Main {
                 "Михайлович", "Петрович"};
         int l, n, m, d, s, id;
         Employee[] employee = new Employee[10];
-        for (int i = 0; i < 10; i++) {               /* заполняем массив случайными значениями */
+        for (int i = 0; i < 10; i++) {                       /* заполняем массив случайными значениями */
             l = (int) (Math.random() * 10);
             n = (int) (Math.random() * 10);
             m = (int) (Math.random() * 10);
